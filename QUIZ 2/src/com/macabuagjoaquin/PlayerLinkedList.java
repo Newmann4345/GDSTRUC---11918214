@@ -14,14 +14,12 @@ public class PlayerLinkedList {
     public int subtractCounter(int x)
     {
         x--;
-        System.out.println("Counter: " + x);
         return x;
     }
     //Subtracts from the in place counter
     public int addCounter(int x)
     {
         x++;
-        System.out.println(x);
         return x;
     }
 

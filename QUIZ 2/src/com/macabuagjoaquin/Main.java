@@ -16,6 +16,7 @@ public class Main {
 //      playerList.add(new Player(2, "LethalBacon", 205));
 //      playerList.add(new Player(3, "HPDeskJet", 34));
 
+        //Declaring the Linked list AND the Counter
         Player asuna = new Player(1, "Asuna", 100);
         Player lethalBacon = new Player(2, "LethalBacon", 205);
         Player hpDeskjet = new Player (3, "HPDeskJet", 34);
@@ -30,12 +31,19 @@ public class Main {
 
         //Print before the purge
         playerLinkedList.printList();
+        System.out.println("Counter: " + Counter);
+
         //THE PURGE
         playerLinkedList.removeHead();
-        playerLinkedList.subtractCounter(Counter);
+        //Subtracting the counter
+        Counter = playerLinkedList.subtractCounter(Counter);
+        playerLinkedList.printList();
+        System.out.println("Counter: " + Counter);
+
         //Print after the purge
         playerLinkedList.printList();
         System.out.println("Counter: " + Counter);
+
 //       //getting an element
 //       System.out.println(playerList.get(0));
 
