@@ -1,4 +1,5 @@
 package com.macabuagjoaquin;
+import java.util.Scanner;
 
 public class Main {
 
@@ -8,6 +9,7 @@ public class Main {
         //60pts: Modify the Selection Sort to look for the smallest value first and put it
         // at the end instead of looking for the largest and putting it in the beginning.
 
+        Scanner pause = new Scanner(System.in);
         int [] numbers = new int [10];
 
         numbers [0] = 35;
@@ -23,26 +25,34 @@ public class Main {
 
         System.out.println("before sorting:");
         printArrayElements(numbers);
+        pause.nextLine();
 
+        System.out.println("\n After selection sorting:");
+        selectionSort(numbers);
+        printArrayElements(numbers);
+        pause.nextLine();
+
+        System.out.println("\n after bubble sorting");
         bubblesSort(numbers);
-        //selectionSort(numbers);
-
-        System.out.println("\n\n after sorting");
         printArrayElements(numbers);
     }
 
     //THE BUBBLE SORT
     private static void bubblesSort(int[] arr)
     {
+        Scanner pause = new Scanner(System.in);
         for (int lastSortedIndex = arr.length - 1; lastSortedIndex > 0; lastSortedIndex--)
         {
-            for(int i = 0; 1 < lastSortedIndex; i++)
+            for(int i = 0; i > lastSortedIndex; i++)
             {
                 if (arr[i] > arr[i + 1])
                 {
+                    pause.nextLine();
                     int temp = arr[i];
                     arr[i] = arr[i + 1];
                     arr[i + 1] = temp;
+
+                    printArrayElements(arr);
                 }
             }
         }
@@ -50,13 +60,16 @@ public class Main {
 
     private static void selectionSort(int[] arr)
     {
+        Scanner pause = new Scanner(System.in);
+        //changed the <
         for(int lastSortedIndex = arr.length - 1; lastSortedIndex > 0; lastSortedIndex--)
         {
             int largestIndex = 0;
 
             for (int i = 0; i <= lastSortedIndex; i++)
             {
-                if (arr[i] > arr[largestIndex])
+                //change
+                if (arr[i] < arr[largestIndex])
                 {
                     largestIndex = i;
                 }
