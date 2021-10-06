@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f12aef6-aa89-4d8c-b3dd-9e8236cbf1ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module 3/MIDTERMS/src/com/macabuagjoaquin/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module 3/MIDTERMS/src/com/macabuagjoaquin/CardStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QUIZ 2/QUIZ 2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QUIZ 2/src/com/macabuagjoaquin/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QUIZ 2/src/com/macabuagjoaquin/PlayerLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QUIZ 2/src/com/macabuagjoaquin/PlayerNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled104.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/macabuagjoaquin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/com/macabuagjoaquin/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="209c62ab-e664-4c67-bb63-307a4478f07e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,9 +15,17 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1z6Y1CmfuH8G3CWyZnLAnZvPyEc" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1z6myRM37yJW7g7fH6iAlznI2TQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -92,7 +89,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.macabuagjoaquin.Main" />
-      <module name="module 3 lecture" />
+      <module name="MIDTERMS" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -100,33 +97,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="module 3 lecture" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="module 3 lecture" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2f12aef6-aa89-4d8c-b3dd-9e8236cbf1ff" name="Changes" comment="" />
-      <created>1633469791548</created>
+      <changelist id="209c62ab-e664-4c67-bb63-307a4478f07e" name="Changes" comment="" />
+      <created>1633477168071</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1633469791548</updated>
+      <updated>1633477168071</updated>
     </task>
     <servers />
   </component>

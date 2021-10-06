@@ -5,13 +5,13 @@ public class Card
     private int id;
     private String name;
 
-    public int getId() {
-        return id;
-    }
-
     public Card(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void setId(int id) {
