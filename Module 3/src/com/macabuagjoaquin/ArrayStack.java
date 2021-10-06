@@ -2,11 +2,11 @@ package com.macabuagjoaquin;
 
 import java.util.EmptyStackException;
 
-public class ArrayStacj {
+public class ArrayStack {
     private Player[] stack;
     private int top;
 
-    public ArrayStacj(int capacity)
+    public ArrayStack(int capacity)
     {
         stack = new Player[capacity];
     }
@@ -47,7 +47,6 @@ public class ArrayStacj {
         return stack[top - 1];
     }
 
-
     public boolean isEmpty()
     {
         return top == 0;
@@ -55,6 +54,7 @@ public class ArrayStacj {
 
     public void printStack()
     {
+        System.out.println("Printing stack: ");
         for (int i = top - 1; i >= 0; i--)
         {
             System.out.println(stack[i]);
