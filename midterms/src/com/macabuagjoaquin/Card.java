@@ -1,9 +1,32 @@
 package com.macabuagjoaquin;
 
+import java.util.Objects;
+
 public class Card
 {
     private int id;
     private String name;
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Card card = (Card) o;
+        return id == card.id && name.equals(card.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
+    }
 
     public Card(int id, String name) {
         this.id = id;

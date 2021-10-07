@@ -2,6 +2,7 @@ package com.macabuagjoaquin;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
+import java.util.Random;
 
 public class CardStack
 {
