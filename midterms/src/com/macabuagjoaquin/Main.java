@@ -54,100 +54,277 @@ public class Main {
         Card card30 = new Card(30, "Silhouette");
 
     //HOMAYGAWD PLEASE I WANT THIS TO TURN INTO A FUNCTION
-       myDeck.push(card1);
-       myDeck.push(card2);
-       myDeck.push(card3);
-       myDeck.push(card4);
-       myDeck.push(card5);
-       myDeck.push(card6);
-       myDeck.push(card7);
-       myDeck.push(card8);
-       myDeck.push(card9);
-       myDeck.push(card10);
-       myDeck.push(card11);
-       myDeck.push(card12);
-       myDeck.push(card13);
-       myDeck.push(card14);
-       myDeck.push(card15);
-       myDeck.push(card16);
-       myDeck.push(card17);
-       myDeck.push(card18);
-       myDeck.push(card19);
-       myDeck.push(card20);
-       myDeck.push(card21);
-       myDeck.push(card22);
-       myDeck.push(card23);
-       myDeck.push(card24);
-       myDeck.push(card25);
-       myDeck.push(card26);
-       myDeck.push(card27);
-       myDeck.push(card28);
-       myDeck.push(card29);
-       myDeck.push(card30);
+     myDeck.push(card1);
+     myDeck.push(card2);
+     myDeck.push(card3);
+     myDeck.push(card4);
+     myDeck.push(card5);
+     myDeck.push(card6);
+     myDeck.push(card7);
+     myDeck.push(card8);
+     myDeck.push(card9);
+     myDeck.push(card10);
+     myDeck.push(card11);
+     myDeck.push(card12);
+     myDeck.push(card13);
+     myDeck.push(card14);
+     myDeck.push(card15);
+     myDeck.push(card16);
+     myDeck.push(card17);
+     myDeck.push(card18);
+     myDeck.push(card19);
+     myDeck.push(card20);
+     myDeck.push(card21);
+     myDeck.push(card22);
+     myDeck.push(card23);
+     myDeck.push(card24);
+     myDeck.push(card25);
+     myDeck.push(card26);
+     myDeck.push(card27);
+     myDeck.push(card28);
+     myDeck.push(card29);
+     myDeck.push(card30);
 
         //TESTING
-        //hand.push(card23);
-        //hand.push(card24);
-        //hand.push(card25);
-        //hand.push(card21);
-        //hand.push(card22);
-//
-        //drawCards(myDeck);
-        //System.out.println("DRAWING\nMY DECK");
-        //myDeck.printStack();
-        //System.out.println("HAND");
-        //hand.printStack();
-        //System.out.println("DISCARDED PILE");
-        //discardedPile.printStack();
+       //hand.push(card23);
+       //hand.push(card24);
+       //hand.push(card25);
+       //hand.push(card21);
+       //hand.push(card22);
 
-        //discardCards(hand);
-        //System.out.println("DRAWING\nMY DECK");
-        //myDeck.printStack();
-        //System.out.println("HAND");
-        //hand.printStack();
-        //System.out.println("DISCARDED PILE");
-        //discardedPile.printStack();
+       //discardedPile.push(hand.pop());
+       //discardedPile.push(hand.pop());
+       //discardedPile.push(hand.pop());
 
-        drawCards(myDeck);
-        discardCards(hand);
+       //System.out.println("");
+       //System.out.print("\nMYDECK ");
+       //myDeck.printStack();
+       //System.out.print("\nHAND ");
+       //hand.printStack();
+       //System.out.print("\nDISCARDED ");
+       //discardedPile.printStack();
+
 
         //The loop will end when the Player deck is empty
-        //while (myDeck.peek() != null)
-        {
-            //random commands for player
-            rng = rand.nextInt(1 + 3);
-            if (rng == 0)
-            {
-                rng = 1;
-            }
+      while (myDeck.peek() != null)
+     {
+         //random commands for player
+         rng = rand.nextInt(1 + 3);
+         if (rng == 0)
+         {
+             rng = 1;
+         }
 
-            //DRAWING FROM DECK
-            if (rng == 1)
-            {
-                drawCards(myDeck);
+         //DRAWING FROM DECK
+         if (rng == 1)
+         {
+             if (myDeck.peek() != null)
+             {
+                 //making sure the amount of cards drawn isn't 0
+                 int random = 1;
+                 random = rand.nextInt(1 + 5);
+                 if (random == 0)
+                 {
+                     random = 1;
+                 }
 
-                //printing stacks
-                System.out.print("MYDECK ");
-                myDeck.printStack();
-                System.out.print("\nMY HAND ");
-                hand.printStack();
-                System.out.print("\nDISCARDED PILE ");
-                discardedPile.printStack();
-            }
-            //DISCARDING CARDS
-            else if (rng == 2)
-            {
-                discardCards(hand);
+                 //transfers the top-most card from the deck to the hand
+                 for (int i = random - 1; i >= 0; i--)
+                 {
+                     hand.push(myDeck.pop());
+                 }
+                 System.out.print("\nDRAWING ");
 
-            }
-            //DRAWING FROM PILE
-            else if (rng == 3)
-            {
-                getDiscardedCards(discardedPile);
-            }
-            pause.nextLine();
-            System.out.println("\n\n\n\n\n\n");
-        }
+                 //Printing of cards
+                 System.out.println("");
+                 if (myDeck.peek() != null)
+                 {
+                     System.out.print("\nMYDECK ");
+                     myDeck.printStack();
+                 }
+                 else if (myDeck.peek() == null)
+                 {
+                     System.out.print("DECK EMPTY");
+                 }
+                 else
+                 {
+                     System.out.print("DECK EMPTY");
+                 }
+
+                 if (hand.peek() != null)
+                 {
+                     System.out.print("\nHAND ");
+                     hand.printStack();
+                 }
+                 else if (myDeck.peek() == null)
+                 {
+                     System.out.print("HAND EMPTY");
+                 }
+                 else
+                 {
+                     System.out.print("HAND EMPTY");
+                 }
+
+                 if (discardedPile.peek() != null)
+                 {
+                     System.out.print("\nDISCARDED PILE ");
+                     discardedPile.printStack();
+                 }
+                 else if (hand.peek() == null)
+                 {
+                     System.out.print("\nDISCARDED PILE IS EMPTY");
+                 }
+                 else
+                 {
+                     System.out.print("\nDISCARDED PILE IS EMPTY");
+                 }
+             }
+             else if (myDeck.peek() == null)
+             {
+                 break;
+             }
+             else
+             {
+                 System.out.print("DECK IS EMPTY");
+             }
+         }
+         //DISCARDING CARDS
+         else if (rng == 2)
+         {
+             if (hand.peek() != null)
+             {
+                 System.out.println("DISCARDING CARDS \n");
+                 while (hand.peek() != null)
+                 {
+                     discardedPile.push(hand.pop());
+                 }
+                 //Printing of cards
+                 System.out.println("");
+                 if (myDeck.peek() != null)
+                 {
+                     System.out.print("\nMYDECK ");
+                     myDeck.printStack();
+                 }
+                 else if (myDeck.peek() == null)
+                 {
+                     System.out.print("DECK EMPTY");
+                 }
+                 else
+                 {
+                     System.out.print("DECK EMPTY");
+                 }
+
+                 if (hand.peek() != null)
+                 {
+                     System.out.print("\nHAND ");
+                     hand.printStack();
+                 }
+                 else if (hand.peek() == null)
+                 {
+                     System.out.print("HAND EMPTY");
+                 }
+                 else
+                 {
+                     System.out.print("HAND EMPTY");
+                 }
+
+                 if (discardedPile.peek() != null)
+                 {
+                     System.out.print("\nDISCARDED PILE ");
+                     discardedPile.printStack();
+                 }
+                 else if (discardedPile.peek() == null)
+                 {
+                     System.out.print("\nDISCARDED PILE IS EMPTY");
+                 }
+                 else
+                 {
+                     System.out.print("\nDISCARDED PILE IS EMPTY");
+                 }
+             }
+             else if (hand.peek() == null)
+             {
+                 System.out.print("HAND EMPTY");
+             }
+             else
+             {
+                 System.out.print("HAND EMPTY");
+             }
+         }
+         //DRAWING FROM PILE
+         else if (rng == 3)
+         {
+             if (discardedPile.peek() != null)
+             {
+                 System.out.println("\n DRAWING CARDS FROM THE DISCARDED PILE \n");
+                 //making sure the amount of cards drawn isn't 0
+                 int random = 1;
+                 random = rand.nextInt(1 + 5);
+                 if (random == 0) {
+                     random = 1;
+                 }
+
+                 //transfers the top-most card from the deck to the hand
+                 for (int i = random - 1; i >= 0; i--) {
+                     //discardedPile.push(hand.pop()); //transfers the top most card from your hand to the discarded pile
+                     hand.push(discardedPile.pop());
+                 }
+                 //Printing of cards
+                 System.out.println("");
+                 if (myDeck.peek() != null)
+                 {
+                     System.out.print("\nMYDECK ");
+                     myDeck.printStack();
+                 }
+                 else if (myDeck.peek() == null)
+                 {
+                     System.out.print("DECK EMPTY");
+                 }
+                 else
+                 {
+                     System.out.print("DECK EMPTY");
+                 }
+
+                 if (hand.peek() != null)
+                 {
+                     System.out.print("\nHAND ");
+                     hand.printStack();
+                 }
+                 else if (hand.peek() == null)
+                 {
+                     System.out.print("HAND EMPTY");
+                 }
+                 else
+                 {
+                     System.out.print("HAND EMPTY");
+                 }
+
+                 if (discardedPile.peek() != null)
+                 {
+                     System.out.print("\nDISCARDED PILE ");
+                     discardedPile.printStack();
+                 }
+                 else if (discardedPile.peek() == null)
+                 {
+                     System.out.print("\nDISCARDED PILE IS EMPTY");
+                 }
+                 else
+                 {
+                     System.out.print("\nDISCARDED PILE IS EMPTY");
+                 }
+             }
+             else if (discardedPile.peek() == null)
+             {
+                 System.out.println("DISCARDED PILE EMPTY");
+             }
+             else
+             {
+                 System.out.print("PILE IS EMPTY");
+             }
+         }
+         pause.nextLine();
+         System.out.println("\n\n\n\n\n\n");
+     }
 
 
         //NOTES
@@ -158,7 +335,7 @@ public class Main {
 
     }
 
-    static CardStack drawCards(CardStack myDeck)
+    static void drawCards(CardStack myDeck)
     {
         Random rand = new Random();
         CardStack hand = new CardStack();
@@ -166,16 +343,16 @@ public class Main {
 
         if (myDeck.peek() != null)
         {
-            //making sure the amount of cards drawn isn't 0
-            int random = 1;
-            random = rand.nextInt(1 + 5);
-            if (random == 0)
-            {
-                random = 1;
-            }
+           //making sure the amount of cards drawn isn't 0
+           int random = 1;
+           random = rand.nextInt(1 + 5);
+           if (random == 0)
+           {
+               random = 1;
+           }
 
-            //transfers the top-most card from the deck to the hand
-            for (int i = random - 1; i >= 0; i--)
+           //transfers the top-most card from the deck to the hand
+            for (int i =  - 1; i >= 0; i--)
             {
                 hand.push(myDeck.pop());
             }
@@ -198,10 +375,9 @@ public class Main {
         {
             System.out.println("DECK EMPTY");
         }
-        return myDeck;
     }
 
-    static CardStack discardCards(CardStack hand)
+    static void discardCards(CardStack hand)
     {
         Random rand = new Random();
         CardStack discardedPile = new CardStack();
@@ -223,10 +399,9 @@ public class Main {
         {
             System.out.print("HAND EMPTY");
         }
-        return hand;
     }
 
-    static CardStack getDiscardedCards(CardStack discardedPile)
+    static void getDiscardedCards(CardStack discardedPile)
     {
         Random rand = new Random();
         CardStack hand = new CardStack();
@@ -245,26 +420,21 @@ public class Main {
                 //discardedPile.push(hand.pop()); //transfers the top most card from your hand to the discarded pile
                 hand.push(discardedPile.pop());
             }
-            //Discarded hands
-          //System.out.print("DISCARDED DECK ");
-          //discardedPile.printStack();
+          //Discarded hands
+          System.out.print("DISCARDED DECK ");
+          discardedPile.printStack();
 
-          ////Player Hand
-          //System.out.println("");
-          //System.out.print("MY HAND ");
-          //hand.printStack();
-          //System.out.println("");
+          //Player Hand
+          System.out.println("");
+          System.out.print("MY HAND ");
+          hand.printStack();
+          System.out.println("");
         }
         else if (discardedPile.peek() == null)
         {
             System.out.println("DISCARDED PILE EMPTY");
         }
-
-
-            return hand;
     }
-
-
 
     static int RNG(int RNG)
     {
